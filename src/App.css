@@ -1,0 +1,211 @@
+
+:root {
+  /* Theme Colors */
+  --background: #1a1a1a;
+  --surface: #2d2d2d;
+  --primary: #646cff;
+  --text: #ffffff;
+  --text-secondary: #888888;
+
+  /* Status Colors */
+  --success: #4caf50;
+  --warning: #ff9800;
+  --error: #f44336;
+  --info: #2196f3;
+
+  /* Common Styles */
+  --border: #444444;
+  --border-radius: 6px;
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+}
+
+/* Application Header */
+.app-title {
+  margin: 1rem 0;
+  color: var(--primary);
+  font-size: 2rem;
+  text-align: center;
+}
+
+.app-description {
+  margin-bottom: 2rem;
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* Queue Form */
+.queue-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+
+  flex: 1;
+  max-width: 350px;
+  min-height: 350px;
+  margin: 0;
+  padding: 40px;
+
+  background-color: #252525;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.form-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: var(--primary);
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+/* Form Inputs */
+.form-group {
+  width: 100%;
+}
+
+.queue-form input,
+.queue-form select {
+  display: block;
+  width: 100%;
+  padding: 12px;
+
+  background-color: var(--surface);
+  color: var(--text);
+
+  border: 1px solid #555;
+  border-radius: var(--border-radius);
+  outline: none;
+}
+
+.queue-form input:focus,
+.queue-form select:focus {
+  border-color: var(--primary);
+}
+
+/* Add Customer Button */
+.add-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 250px;
+  padding: 10px 15px;
+  background-color: var(--primary);
+  color: var(--text);
+  border: none;
+  border-radius: 5px;
+
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  opacity: 0.9;
+}
+
+.add-icon {
+  font-size: 16px;
+}
+.app-main{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+}
+.queue-display {
+  flex: 2;
+  min-height: 350px;
+  padding: 20px;
+
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+}
+.queue-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 10px;
+
+  background-color: #333;
+  border-radius: var(--border-radius);
+}
+
+
+/* Queue List */
+.queue-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Individual Queue Item */
+.queue-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  padding: 15px;
+  background-color: #252525;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+/* Customer Details */
+.customer-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.customer-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--text);
+}
+
+.customer-service {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.customer-status {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* Action Button */
+.customer-actions button {
+  padding: 9px 16px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.customer-actions button:hover {
+  opacity: 0.85;
+}
+.customer-actions .remove-btn {
+  background-color: red;
+}
